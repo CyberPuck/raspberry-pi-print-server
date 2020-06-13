@@ -1,0 +1,9 @@
+# simple site for helping install printer in Windows
+# with DNS it might be easier to use this feature.
+server {
+	listen 80;
+	root /www/data;
+	location / { 
+		
+	}
+}

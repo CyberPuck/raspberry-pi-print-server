@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canon iP-1800 Setup</title>
+        <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            h1 {
+                
+            }
+            h2 {
+                margin-left: 40px;
+                text-decoration: underline;
+            }
+            h3 {
+                font-style: italic;
+                margin-left: 45px;
+            }
+            li {
+                margin-bottom: 20px;
+                margin-left: 20px;
+            }
+            img {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 5px;
+                width: 150px;
+            }
+            img:hover {
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                box-shadow: 0 0 2px 1px #0099BB;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Installing the Canon Network Printer in Windows</h1>
+
+        <h2>Print Server Configuration</h2>
+        <p>
+            These instructions are for Windows 10 Users attempting to install and use the Canon PIXAM iP 1800 printer connected to a Raspberry Pi.<br>
+            The Raspberry Pi is a Model B gen 1, running Rasbian lite (v10, "buster").  It is running CUPS as well (v2.2.10).
+        </p>
+        <h2>Windows 10 Setup Instructions</h2>
+        <p>
+            Follow these simple steps for setting up the printer server.
+
+            <b>NOTE</b> The IP address of the Raspberry Pi might change on reboot, requiring the printer to be updated!
+        </p>
+        <h3>Steps</h3>
+        <ol>
+            <li>
+                Open "Control Panel" and navigate to:  Hardware and Sound -> Devices and Printers
+            </li>
+            <li>
+                In the "Devices and Printers" GUI at the top, select "Add a printer" <br>
+                <img src="Devices_and_printers.png" alt="Windows 10 Control Panel Devices and Printers, with Add A Printer button highlighted"/>
+            </li>
+            <li>
+                Click the link "The printer that I want isn't listed" <br>
+                <img src="Missing_printer_link.png" alt="Add a device dialog with the missing printer link highlighted"/>
+            </li>
+            <li>
+                In the "Add Printer" dialog that pops up, select the "Select a shared printer by name" radio button.  Enter the following text "http://192.168.1.39:631/printers/Canon-iP-1800".  Press "Next"<br>
+                <img src="Add_printer_dialog.png" alt="Add printer dialog with the select a shared printer by name option selected with print link http://192.168.1.39:631/printers/Canon-iP-1800"/>
+            </li>
+            <li>
+                A dialog will pop up with the Printer name, press "Ok"
+            </li>
+            <li>
+                A success dialog will pop up with a "Print a test page" button, press "Finish"
+            </li>
+            <li>
+                Printer is ready for use
+            </li>
+        </ol>
+
+    </body>
+</html>
