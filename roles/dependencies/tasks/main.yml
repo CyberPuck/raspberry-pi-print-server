@@ -1,0 +1,7 @@
+---
+# Install dependencies
+- name: Install dependencies
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ dependencies }}"

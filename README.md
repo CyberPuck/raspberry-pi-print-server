@@ -16,9 +16,15 @@ assumptions on how the Pi is configured:
 
 Once the Pi is configured, setup the control node.  Run:
 
-1. `create-venv.sh`, this will setup the Ansible environment
+1. Update permissions: `chmod 744 create-venv.sh`
+1. `./create-venv.sh`, this will setup the Ansible environment
 2. In your shell run `./venv/bin/activate`
-3. Run `ansible-playbook start-pi.yaml -i inventory.ini`
+3. Run `install-print-server.py -n <IP Address of Pi>`
+
+TODO: Update the environment to move the files to a dedicated folder
+TODO: Add Ansible to install dependencies
+TODO: Add inventory file setup
+TODO: Missing anything?
 
 # Old Installation
 

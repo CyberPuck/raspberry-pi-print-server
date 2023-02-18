@@ -18,7 +18,7 @@ def setup_parser():
 # generate an inventory file that will be used by Ansible.
 def generate_inventory_file(file_name, ip_address):
     with open(file_name, 'w') as inventory_file:
-        inventory_file.write("---\nall:\n\thosts:\n\t\tprinter: " + ip_address)
+        inventory_file.write("---\nall:\n\thosts:\n\t\tprinter: " + ip_address + "\n")
 
 # Start up Ansible playbook to run the setup and configuration.
 # The file_name is expected to be the inventory file.

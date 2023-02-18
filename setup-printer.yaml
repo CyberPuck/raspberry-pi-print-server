@@ -1,2 +1,8 @@
 ---
 # Playbook for setting up the Raspberry Pi Printer
+- name: Raspberry Pi Printer Configuration
+  hosts: all
+  tasks:
+    - name: Install dependencies
+      ansible.builtin.include_role:
+        name: dependencies

@@ -1,0 +1,6 @@
+---
+# vars file for dependencies
+
+dependencies:
+  - cups
+  - nginx

@@ -1,1 +1,3 @@
 ansible==7.2.0
+# linter
+ansible-lint==6.14.0a0

@@ -4,7 +4,7 @@
 # ------ PRINTER setup ------
 echo Installing CUPS
 # Install CUPS
-sudo apt isntall cups
+sudo apt install cups
 
 # create printer user
 useradd printer
