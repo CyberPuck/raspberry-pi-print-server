@@ -1,1 +1,4 @@
+# Virtual environment folder
 venv/
+# Inventory file auto-generated during playbook run
+inventory.yaml
