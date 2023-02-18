@@ -1,0 +1,17 @@
+---
+# tasks file for cups
+- name: Setup printer user
+  ansible.builtin.user:
+    name: printer
+    group: lpadmin
+
+- name: Copy configuration
+  ansible.builtin.copy:
+    src: ./configs/cupsd.conf
+    dest: /etc/cups/cupsd.conf
+    mode: '0644'
+
+- name: Restart CUPS service
+  ansible.builtin.service:
+    name: cups
+    state: restarted

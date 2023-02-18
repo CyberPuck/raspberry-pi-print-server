@@ -1,0 +1,23 @@
+---
+# tasks file for nginx
+- name: Copy over web directory
+  ansible.posix.synchronize:
+    src: ./website
+    dest: /www/data/
+
+- name: Update config file
+  ansible.builtin.copy:
+    src: ./configs/nginx.conf
+    dest: /etc/nginx/nginx.conf
+    mode: '0644'
+
+- name: Update site folder
+  ansible.builtin.copy:
+    src: ./configs/helper-site
+    dest: /etc/nginx/sites-available/helper-site
+    mode: '0644'
+
+- name: Restart NGINX service
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
