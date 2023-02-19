@@ -1,6 +1,7 @@
 ---
 # Install dependencies
 - name: Install dependencies
+  become: yes
   ansible.builtin.package:
     name: "{{ item }}"
     state: present

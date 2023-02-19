@@ -6,3 +6,11 @@
     - name: Install dependencies
       ansible.builtin.include_role:
         name: dependencies
+
+    - name: Install and configure CUPS
+      ansible.builtin.include_role:
+        name: cups
+
+    - name: Install and configure NGINX
+      ansible.builtin.include_role:
+        name: nginx
